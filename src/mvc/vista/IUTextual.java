@@ -42,6 +42,7 @@ public class IUTextual implements IVistaAlquilerVehiculos {
     @Override
     public void salir() {
         System.out.println("Hasta la proxima!");
+        controlador.salir();
     }
 
     @Override

@@ -36,7 +36,7 @@ public class Clientes {
                 clientes = (Cliente[]) entrada.readObject();
                 entrada.close();
                 System.out.println("Fichero clientes leído satisfactoriamente.");
-                Cliente.aumentarUltimoIdentificador(calcularUltimoIdentificador());
+                //Cliente.aumentarUltimoIdentificador(calcularUltimoIdentificador());
             } catch (ClassNotFoundException e) {
                 System.out.println("No puedo encontrar la clase que tengo que leer.");
             } catch (IOException e) {

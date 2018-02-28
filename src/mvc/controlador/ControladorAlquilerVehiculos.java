@@ -1,12 +1,10 @@
 package mvc.controlador;
 
-import mvc.modelo.AlquilerVehiculos;
 import mvc.modelo.IModeloAlquilerVehiculos;
 import mvc.modelo.dominio.Cliente;
 import mvc.modelo.dominio.Alquiler;
 import mvc.modelo.dominio.vehiculo.TipoVehiculo;
 import mvc.modelo.dominio.vehiculo.Vehiculo;
-import mvc.vista.IUTextual;
 import mvc.vista.IVistaAlquilerVehiculos;
 
 /**
@@ -23,24 +21,18 @@ public class ControladorAlquilerVehiculos implements IControladorAlquilerVehicul
         vista.setControlador(this);
     }
 
-    /*@Override
-    public void comenzar() {
-        modelo.anadirDatosPrueba();
-        vista.comenzar();
-    }*/
     @Override
     public void comenzar() {
-        //modelo.anadirDatosPrueba();
-        vista.comenzar();
-        modelo.leerVehiculos();
         modelo.leerClientes();
+        modelo.leerVehiculos();
         modelo.leerAlquileres();
+        vista.comenzar();
     }
 
     @Override
     public void salir() {
-        modelo.escribirVehiculos();
         modelo.escribirClientes();
+        modelo.escribirVehiculos();
         modelo.escribirAlquileres();
     }
 
@@ -99,7 +91,7 @@ public class ControladorAlquilerVehiculos implements IControladorAlquilerVehicul
         return modelo.getAlquileres();
     }
 
-   /* @Override
+    /* @Override
     public void anadirDatosPrueba() {
         modelo.anadirDatosPrueba();
     }*/

@@ -3,7 +3,6 @@ package mvc.modelo;
 import mvc.modelo.dominio.vehiculo.Vehiculo;
 import mvc.modelo.dominio.*;
 import mvc.modelo.dao.*;
-import mvc.modelo.dominio.vehiculo.DatosTecnicosVehiculo;
 import mvc.modelo.dominio.vehiculo.TipoVehiculo;
 
 /**
