@@ -26,6 +26,14 @@ public class Cliente implements Serializable {
         identificador = ultimoIdentificador;
     }
 
+    public static void aumentarUltimoIdentificador(int cantidad) {
+        if (cantidad > 0) {
+            ultimoIdentificador += cantidad;
+        } else {
+            throw new ExcepcionAlquilerVehiculos("Sólo puedo aumentar el último identificador");
+        }
+    }
+
     public Cliente(String nombre, String dni, DireccionPostal direccionPostal) {
         setNombre(nombre);
         setDni(dni);
