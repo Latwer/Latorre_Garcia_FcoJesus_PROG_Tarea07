@@ -1,5 +1,6 @@
 package mvc.modelo.dominio;
 
+import java.io.Serializable;
 import mvc.modelo.dominio.vehiculo.Vehiculo;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -7,8 +8,9 @@ import java.text.SimpleDateFormat;
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
-public class Alquiler {
+public class Alquiler implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     private Vehiculo vehiculo;
     private Cliente cliente;
     private Date fecha;
@@ -72,6 +74,7 @@ public class Alquiler {
     public double getPrecio() {
         return getPrecioFijo() + vehiculo.getPrecioEspecifico();
     }
+
     public double getPrecioFijo() {
         return PRECIO_DIA * dias;
     }
