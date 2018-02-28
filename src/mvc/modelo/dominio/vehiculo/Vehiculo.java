@@ -1,18 +1,17 @@
 package mvc.modelo.dominio.vehiculo;
 
+import java.io.Serializable;
 import java.util.regex.*;
 import mvc.modelo.dominio.ExcepcionAlquilerVehiculos;
 
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Serializable{
+    private static final long serialVersionUID = 1L;
     private DatosTecnicosVehiculo datosTecnicos;
     private String matricula, marca, modelo;
     private boolean disponible;
-    /*public final double FACTOR_CILINDRADA=datosTecnicos.getCilindrada();
-    public final double FACTOR_NUMERO_PLAZAS=datosTecnicos.getNumeroPlazas();
-    public final double FACTOR_PMA=datosTecnicos.getPma();*/
     public final double FACTOR_CILINDRADA=50.0;
     public final double FACTOR_NUMERO_PLAZAS=1.0;
     public final double FACTOR_PMA=20.0;
