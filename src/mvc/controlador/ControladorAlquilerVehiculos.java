@@ -23,10 +23,25 @@ public class ControladorAlquilerVehiculos implements IControladorAlquilerVehicul
         vista.setControlador(this);
     }
 
-    @Override
+    /*@Override
     public void comenzar() {
         modelo.anadirDatosPrueba();
         vista.comenzar();
+    }*/
+    @Override
+    public void comenzar() {
+        //modelo.anadirDatosPrueba();
+        vista.comenzar();
+        modelo.leerVehiculos();
+        modelo.leerClientes();
+        modelo.leerAlquileres();
+    }
+
+    @Override
+    public void salir() {
+        modelo.escribirVehiculos();
+        modelo.escribirClientes();
+        modelo.escribirAlquileres();
     }
 
     @Override
@@ -75,7 +90,7 @@ public class ControladorAlquilerVehiculos implements IControladorAlquilerVehicul
     }
 
     @Override
-    public void cerrarTrabajo(Cliente cliente, Vehiculo vehiculo) {
+    public void closeAlquiler(Cliente cliente, Vehiculo vehiculo) {
         modelo.closeAlquiler(cliente, vehiculo);
     }
 
@@ -84,8 +99,8 @@ public class ControladorAlquilerVehiculos implements IControladorAlquilerVehicul
         return modelo.getAlquileres();
     }
 
-    @Override
+   /* @Override
     public void anadirDatosPrueba() {
         modelo.anadirDatosPrueba();
-    }
+    }*/
 }

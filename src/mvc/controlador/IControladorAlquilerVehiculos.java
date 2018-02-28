@@ -14,11 +14,11 @@ public interface IControladorAlquilerVehiculos {
 
     void addVehiculo(Vehiculo vehiculo, TipoVehiculo tipoVehiculo);
 
-    void anadirDatosPrueba();
-
-    void cerrarTrabajo(Cliente cliente, Vehiculo vehiculo);
+    void closeAlquiler(Cliente cliente, Vehiculo vehiculo);
 
     void comenzar();
+
+    void salir();
 
     void delCliente(String dni);
 
@@ -35,5 +35,5 @@ public interface IControladorAlquilerVehiculos {
     Vehiculo[] getVehiculos();
 
     void openAlquiler(Cliente cliente, Vehiculo vehiculo);
-    
+
 }

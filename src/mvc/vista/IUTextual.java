@@ -163,7 +163,7 @@ public class IUTextual implements IVistaAlquilerVehiculos {
             System.out.println("ERROR: No existe un cliente con dicho dni o un vehículo con dicha matrícula\n");
         } else {
             try {
-                controlador.cerrarTrabajo(cliente, turismo);
+                controlador.closeAlquiler(cliente, turismo);
                 System.out.println("Alquiler cerrado satisfactoriamente\n");
             } catch (ExcepcionAlquilerVehiculos e) {
                 System.out.printf("ERROR: %s%n%n", e.getMessage());

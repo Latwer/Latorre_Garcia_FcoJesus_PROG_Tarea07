@@ -75,7 +75,7 @@ public class AlquilerVehiculos implements IModeloAlquilerVehiculos {
 
     @Override
     public void closeAlquiler(Cliente cliente, Vehiculo vehiculo) {
-        comprobarExistenciaClienteTurismo(cliente, vehiculo);
+        //comprobarExistenciaClienteTurismo(cliente, vehiculo);
         alquileres.closeAlquiler(cliente, vehiculo);
     }
 
@@ -84,13 +84,42 @@ public class AlquilerVehiculos implements IModeloAlquilerVehiculos {
             throw new ExcepcionAlquilerVehiculos("El propietario del vehículo no existe");
         }
     }*/
-    private void comprobarExistenciaClienteTurismo(Cliente cliente, Vehiculo vehiculo) {
+ /*private void comprobarExistenciaClienteTurismo(Cliente cliente, Vehiculo vehiculo) {
         if (vehiculos.getVehiculo(vehiculo.getMatricula()) == null && clientes.getCliente(cliente.getDni()) == null) {
             throw new ExcepcionAlquilerVehiculos("El cliente o turismo no existe");
         }
+    }*/
+    @Override
+    public void leerVehiculos() {
+        vehiculos.leerVehiculos();
     }
 
     @Override
+    public void escribirVehiculos() {
+        vehiculos.escribirVehiculos();
+    }
+
+    @Override
+    public void leerClientes() {
+        clientes.leerClientes();
+    }
+
+    @Override
+    public void escribirClientes() {
+        clientes.escribirClientes();
+    }
+
+    @Override
+    public void leerAlquileres() {
+        alquileres.leerAlquileres();
+    }
+
+    @Override
+    public void escribirAlquileres() {
+        alquileres.escribirAlquileres();
+    }
+
+    /*@Override
     public void anadirDatosPrueba() {
         Cliente cliente1 = new Cliente("Juanma", "11111111A", new DireccionPostal("calle esmeralda", "Almería", "04001"));
         Cliente cliente2 = new Cliente("Sergio", "22222222B", new DireccionPostal("calle granada", "Almería", "04002"));
@@ -110,5 +139,5 @@ public class AlquilerVehiculos implements IModeloAlquilerVehiculos {
         closeAlquiler(cliente1, vehiculo1);
         closeAlquiler(cliente2, vehiculo2);
         closeAlquiler(cliente3, vehiculo3);
-    }
+    }*/
 }
