@@ -1,12 +1,14 @@
 package mvc.modelo.dominio;
 
+import java.io.Serializable;
 import java.util.regex.*;
 
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
-public class Cliente {
+public class Cliente implements Serializable {
 
+    private static final long serialVersionUID = 1L;
     private String nombre, dni;
     private DireccionPostal direccionPostal;
     private int identificador;

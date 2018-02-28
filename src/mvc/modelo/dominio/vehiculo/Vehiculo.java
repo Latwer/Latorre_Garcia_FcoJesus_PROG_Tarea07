@@ -7,14 +7,15 @@ import mvc.modelo.dominio.ExcepcionAlquilerVehiculos;
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
-public abstract class Vehiculo implements Serializable{
+public abstract class Vehiculo implements Serializable {
+
     private static final long serialVersionUID = 1L;
     private DatosTecnicosVehiculo datosTecnicos;
     private String matricula, marca, modelo;
     private boolean disponible;
-    public final double FACTOR_CILINDRADA=50.0;
-    public final double FACTOR_NUMERO_PLAZAS=1.0;
-    public final double FACTOR_PMA=20.0;
+    public final double FACTOR_CILINDRADA = 50.0;
+    public final double FACTOR_NUMERO_PLAZAS = 1.0;
+    public final double FACTOR_PMA = 20.0;
 
     public Vehiculo(Vehiculo vehiculo) {
         matricula = vehiculo.getMatricula();
@@ -60,6 +61,7 @@ public abstract class Vehiculo implements Serializable{
             throw new ExcepcionAlquilerVehiculos("Modelo no válido");
         }
     }
+
     private void setDatosTecnicos(DatosTecnicosVehiculo datosTecnicos) {
         if (datosTecnicos != null) {
             this.datosTecnicos = new DatosTecnicosVehiculo(datosTecnicos);
@@ -67,7 +69,9 @@ public abstract class Vehiculo implements Serializable{
             throw new ExcepcionAlquilerVehiculos("El vehiculo debe de tener datos técnicos definidos");
         }
     }
+
     public abstract TipoVehiculo getTipoVehiculo();
+
     public abstract double getPrecioEspecifico();
 
     public String getMatricula() {
@@ -85,7 +89,8 @@ public abstract class Vehiculo implements Serializable{
     public boolean getDisponible() {
         return disponible;
     }
-    public DatosTecnicosVehiculo getDatosTecnicos(){
+
+    public DatosTecnicosVehiculo getDatosTecnicos() {
         return datosTecnicos;
     }
 
