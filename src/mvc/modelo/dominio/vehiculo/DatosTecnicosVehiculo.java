@@ -1,9 +1,11 @@
 package mvc.modelo.dominio.vehiculo;
 
+import java.io.Serializable;
+
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
-public class DatosTecnicosVehiculo {
+public class DatosTecnicosVehiculo implements Serializable{
 
     private int cilindrada, numeroPlazas, pma;
 

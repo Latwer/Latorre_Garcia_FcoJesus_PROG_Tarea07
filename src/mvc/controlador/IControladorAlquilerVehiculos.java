@@ -10,30 +10,30 @@ import mvc.modelo.dominio.vehiculo.Vehiculo;
  */
 public interface IControladorAlquilerVehiculos {
 
-    void addCliente(Cliente cliente);
-
-    void addVehiculo(Vehiculo vehiculo, TipoVehiculo tipoVehiculo);
-
-    void closeAlquiler(Cliente cliente, Vehiculo vehiculo);
-
     void comenzar();
 
     void salir();
 
+    void addCliente(Cliente cliente);
+
     void delCliente(String dni);
-
-    void delVehiculo(String matricula);
-
-    Alquiler[] getAlquileres();
 
     Cliente getCliente(String dni);
 
     Cliente[] getClientes();
+
+    void addVehiculo(Vehiculo vehiculo, TipoVehiculo tipoVehiculo);
+
+    void delVehiculo(String matricula);
 
     Vehiculo getVehiculo(String matricula);
 
     Vehiculo[] getVehiculos();
 
     void openAlquiler(Cliente cliente, Vehiculo vehiculo);
+
+    void closeAlquiler(Cliente cliente, Vehiculo vehiculo);
+
+    Alquiler[] getAlquileres();
 
 }

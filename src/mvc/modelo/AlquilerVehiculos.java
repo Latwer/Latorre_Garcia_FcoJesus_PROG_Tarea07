@@ -89,16 +89,6 @@ public class AlquilerVehiculos implements IModeloAlquilerVehiculos {
         }
     }*/
     @Override
-    public void leerVehiculos() {
-        vehiculos.leerVehiculos();
-    }
-
-    @Override
-    public void escribirVehiculos() {
-        vehiculos.escribirVehiculos();
-    }
-
-    @Override
     public void leerClientes() {
         clientes.leerClientes();
     }
@@ -106,6 +96,16 @@ public class AlquilerVehiculos implements IModeloAlquilerVehiculos {
     @Override
     public void escribirClientes() {
         clientes.escribirClientes();
+    }
+
+    @Override
+    public void leerVehiculos() {
+        vehiculos.leerVehiculos();
+    }
+
+    @Override
+    public void escribirVehiculos() {
+        vehiculos.escribirVehiculos();
     }
 
     @Override

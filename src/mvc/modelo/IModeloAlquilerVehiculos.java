@@ -15,7 +15,6 @@ public interface IModeloAlquilerVehiculos {
     void addVehiculo(Vehiculo vehiculo, TipoVehiculo tipoVehiculo);
 
     //void anadirDatosPrueba();
-
     void closeAlquiler(Cliente cliente, Vehiculo vehiculo);
 
     void delCliente(String dni);
@@ -34,13 +33,13 @@ public interface IModeloAlquilerVehiculos {
 
     void openAlquiler(Cliente cliente, Vehiculo vehiculo);
 
-    void leerVehiculos();
-
-    void escribirVehiculos();
-
     void leerClientes();
 
     void escribirClientes();
+
+    void leerVehiculos();
+
+    void escribirVehiculos();
 
     void leerAlquileres();
 

@@ -1,11 +1,12 @@
 package mvc.modelo.dominio;
 
+import java.io.Serializable;
 import java.util.regex.*;
 
 /**
  * @author Francisco Jesus Latorre Garcia <franlatorregarcia@gmail.com>
  */
-public class DireccionPostal {
+public class DireccionPostal implements Serializable {
 
     private String calle;
     private String localidad;
